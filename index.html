@@ -3,19 +3,30 @@
 <head>
 <!--
   ══════════════════════════════════════════════════════════════════
-  DIANA ZARAGOZA — EXPERIENCIA DIGITAL DE TRANSFORMACIÓN (v5)
+  📷 SOLUCIÓN AL PROBLEMA DE LAS FOTOS (v7)
   ──────────────────────────────────────────────────────────────────
-  CAMBIOS DE ESTA VERSIÓN:
-  · WHATSAPP REAL: +52 999 669 4307 (todos los CTA y el flotante).
-  · INSTAGRAM REAL: @dianazarwellness (lista, preview y CONFIG).
-  · BOTÓN FLOTANTE: solo WhatsApp, con animación — entrada elástica,
-    flotación suave continua, anillo pulsante y etiqueta al hover.
-  · v4 · lockup de marca Great Vibes + mayúsculas espaciadas.
-  · v3 · fotos reales (assets/foto-hero.jpg, assets/foto-historia.jpg).
-  · v2 · scroll nativo fluido, sin Lenis ni filtros costosos.
+  Ahora la página BUSCA SOLA tus fotos dentro de /assets: prueba
+  nombres y extensiones comunes (foto-hero.jpg, foto-hero.jpeg,
+  foto-hero.png, hero.jpg, diana.png, 1.jpg, JPG mayúsculas, e incluso
+  el error típico de Windows "foto-hero.jpg.jpg"). Si las encuentra,
+  las coloca automáticamente en hero, Conóceme, experiencia 01 y redes.
+
+  SI AÚN NO APARECEN, revisa esta lista (99% de los casos):
+  1) La carpeta "assets" debe estar AL LADO de index.html
+     (misma carpeta).  ✔ index.html  ✔ assets/foto-hero.jpg
+  2) Windows OCULTA extensiones: activa "Vista → Extensiones de
+     nombre de archivo" y verifica que NO se llame
+     "foto-hero.jpg.jpg" (renombrar quitando el doble .jpg).
+  3) Mayúsculas/minúsculas y acentos importan en algunos servidores:
+     evita "Foto Hero.JPG", "FOTO-HERO.jpg", "foto héroe.jpg".
+  4) Después de copiar, recarga con Ctrl + F5 (Mac: Cmd + Shift + R).
+  5) ¿Nombres totalmente distintos? Pégalos en CONFIG.photos
+     (acepta nombre de archivo o URL https://…).
+  Mientras tanto, la página muestra un respaldo editorial automático.
+  Abre la consola (F12) para ver qué foto encontró el buscador. ✅
   ══════════════════════════════════════════════════════════════════
-  ⚠ EDITAR: CONFIG (nombre, WhatsApp, redes) al inicio del <script>.
-     Reemplazar testimonios por los reales de la clienta.
+  DIANA ZARAGOZA · v7 · WhatsApp +52 999 669 4307 · @dianazarwellness
+  ⚠ EDITAR: CONFIG (nombre, WhatsApp, redes, fotos) y testimonios.
   ══════════════════════════════════════════════════════════════════
 -->
 <meta charset="UTF-8">
@@ -40,7 +51,6 @@
 {"@context":"https://schema.org","@type":"Person","name":"Diana Zaragoza","jobTitle":"Facilitadora de desarrollo personal · Coach & Teacher Heal Your Life®","description":"Facilitadora certificada en desarrollo personal: Heal Your Life®, Access Bars®, Access Facelift® y talleres de autoconocimiento y autoestima.","knowsAbout":["Heal Your Life","Access Bars","Access Facelift","Desarrollo personal","Autoestima"],"sameAs":["https://instagram.com/dianazarwellness","https://facebook.com/dianazarwellness","https://tiktok.com/@dianazarwellness","https://youtube.com/@dianazarwellness"]}
 </script>
 <style>
-/* ═══════════ 1 · SISTEMA ═══════════ */
 :root{
   --ivory:#F7F2E9; --cream:#FBF8F1; --champagne:#EFE3CF; --sand:#E5D8C1; --mineral:#D9CBB3;
   --terracotta:#B4653F; --terra-soft:#C08560; --sage:#8D9B84;
@@ -70,7 +80,6 @@ em{font-style:italic}
 .grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
 
-/* ═══════════ 2 · UTILIDADES TIPO ═══════════ */
 .kicker{display:flex;align-items:center;gap:.9rem;font:500 .68rem/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
 .kicker::before{content:"";width:44px;height:1px;background:var(--gold);flex:none}
 .kicker .cap{color:var(--terra-soft)}
@@ -81,7 +90,6 @@ em{font-style:italic}
 .dark{background:var(--espresso);color:var(--ivory)}
 .dark .lead{color:rgba(247,242,233,.72)}
 
-/* Lockup de marca */
 .brand-lock{display:flex;flex-direction:column;line-height:1;text-align:left}
 .brand-lock .first{font-family:var(--script);font-weight:400;font-size:1.62rem;color:var(--terracotta);transform:translateY(2px)}
 .brand-lock .last{font:500 .6rem/1 var(--sans);letter-spacing:.46em;text-transform:uppercase;color:var(--espresso);margin-top:.28rem}
@@ -112,7 +120,6 @@ em{font-style:italic}
 .link-cta:hover svg{transform:translateX(5px)}
 .dark .link-cta{color:var(--ivory)}
 
-/* ═══════════ 3 · NAV ═══════════ */
 .nav{position:fixed;inset:0 0 auto;z-index:50;height:var(--nav-h);display:flex;align-items:center;transition:background .5s,box-shadow .5s,height .5s}
 .nav.scrolled{background:rgba(247,242,233,.97);height:68px;box-shadow:0 1px 0 var(--line)}
 .nav-in{width:min(1280px,94%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}
@@ -147,7 +154,6 @@ body.menu-open .menu-foot{opacity:1}
 .menu-foot .menu-name{font-family:var(--script);font-size:2rem;color:var(--gold-soft)}
 .menu-foot p{font-size:.85rem;color:rgba(247,242,233,.6)}
 
-/* ═══════════ 4 · RAIL ═══════════ */
 .rail{position:fixed;left:2.1rem;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;align-items:center;gap:1.1rem}
 .rail-word{writing-mode:vertical-rl;transform:rotate(180deg);font:500 .62rem/1 var(--sans);letter-spacing:.4em;text-transform:uppercase;color:var(--terra-soft);min-height:96px;display:flex;align-items:center}
 .rail-line{width:1px;height:110px;background:var(--line);position:relative;overflow:hidden}
@@ -157,7 +163,6 @@ body.menu-open .menu-foot{opacity:1}
 .rail-dots i.on{background:var(--gold);transform:scale(1.5)}
 @media(max-width:1180px){.rail{display:none}}
 
-/* ═══════════ 5 · HERO ═══════════ */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:calc(var(--nav-h) + 3rem) 0 5rem;overflow:hidden}
 .hero-bg{position:absolute;inset:0;pointer-events:none}
 .glow{position:absolute;border-radius:50%;opacity:.6}
@@ -201,7 +206,6 @@ body.menu-open .menu-foot{opacity:1}
   .hero-scroll{display:none}
 }
 
-/* ═══════════ 6 · MARQUEE ═══════════ */
 .marquee{border-block:1px solid var(--line);padding:1.15rem 0;overflow:hidden;background:var(--cream)}
 .marquee-track{display:flex;gap:3.4rem;width:max-content;animation:mq 46s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
@@ -209,7 +213,6 @@ body.menu-open .menu-foot{opacity:1}
 .marquee span::after{content:"✳";font-style:normal;color:var(--gold);font-size:.8rem}
 @keyframes mq{to{transform:translateX(-50%)}}
 
-/* ═══════════ 7 · ¿Y SI…? ═══════════ */
 .whatif{padding:clamp(5.5rem,11vw,9.5rem) 0}
 .whatif-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(3rem,7vw,7rem)}
 .whatif h2{font-size:clamp(2.2rem,4.6vw,3.7rem)}
@@ -226,7 +229,6 @@ body.menu-open .menu-foot{opacity:1}
 .wi-echo{margin-top:1.8rem;min-height:3.4rem;font:italic 300 1.05rem/1.6 var(--display);color:var(--gold-soft)}
 @media(max-width:960px){.whatif-grid{grid-template-columns:1fr}}
 
-/* ═══════════ 8 · PUENTE ═══════════ */
 .bridge{min-height:230vh;position:relative}
 .bridge-sticky{position:sticky;top:0;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 6%}
 .bridge-line{font-size:clamp(2rem,5.4vw,4.3rem);max-width:22ch}
@@ -236,7 +238,6 @@ body.menu-open .menu-foot{opacity:1}
 .bridge-sub{margin-top:2rem;max-width:44ch;color:rgba(36,28,21,.66)}
 .bridge .link-cta{margin-top:2.4rem}
 
-/* ═══════════ 9 · EXPERIENCIAS ═══════════ */
 .exp-sec{padding-top:clamp(5rem,10vw,8.5rem)}
 .exp-head{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end;padding-bottom:clamp(3rem,6vw,5rem)}
 .exp-head .lead{justify-self:end;align-self:end}
@@ -279,7 +280,6 @@ body.menu-open .menu-foot{opacity:1}
   .exp--oval .exp-frame{max-width:100%}
 }
 
-/* ═══════════ 10 · HISTORIA ═══════════ */
 .story-sec{padding:clamp(5.5rem,11vw,9.5rem) 0}
 .story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(3rem,7vw,7rem)}
 .story-media{position:relative}
@@ -307,7 +307,6 @@ body.menu-open .menu-foot{opacity:1}
 .certs-note{margin-top:1.6rem;font-size:.86rem;color:rgba(36,28,21,.55)}
 @media(max-width:720px){.cert-row{grid-template-columns:auto 1fr}.cert-row .c-role{grid-column:2;text-align:left}}
 
-/* ═══════════ 11 · TESTIMONIOS ═══════════ */
 .stories{padding:clamp(5.5rem,11vw,9rem) 0 12vh}
 .stories-head{margin-bottom:clamp(3rem,6vw,5rem)}
 .stories-stack{display:flex;flex-direction:column;gap:8vh}
@@ -325,7 +324,6 @@ body.menu-open .menu-foot{opacity:1}
 .t-card--3 .t-who .t-tag{color:var(--gold-soft)}
 @media(max-width:720px){.t-card{position:relative;top:0;min-height:0}}
 
-/* ═══════════ 12 · ELEGIR ═══════════ */
 .choose{padding:clamp(5.5rem,11vw,9rem) 0}
 .choose-list{margin-top:clamp(2.6rem,5vw,4rem);border-top:1px solid var(--line)}
 .choose-row{display:grid;grid-template-columns:auto 1fr auto auto;gap:clamp(1.2rem,3vw,3rem);align-items:center;width:100%;text-align:left;padding:clamp(1.6rem,3.4vw,2.6rem) .6rem;border-bottom:1px solid var(--line);transition:background .45s,padding-left .45s;position:relative;overflow:hidden}
@@ -340,7 +338,6 @@ body.menu-open .menu-foot{opacity:1}
 .choose-row:hover .ch-a{transform:rotate(-45deg);background:var(--espresso);border-color:var(--espresso);color:var(--ivory)}
 @media(max-width:720px){.choose-row{grid-template-columns:auto 1fr auto}.choose-row .ch-d{display:none}}
 
-/* ═══════════ 13 · CTA FINAL ═══════════ */
 .final{position:relative;overflow:hidden;padding:clamp(6.5rem,13vw,11rem) 0;text-align:center}
 .final .glow-c{position:absolute;left:50%;top:-30%;width:70vw;height:70vw;transform:translateX(-50%);background:radial-gradient(circle,rgba(198,167,108,.16),transparent 62%)}
 .final-title{font-size:clamp(2.6rem,6.4vw,5.2rem)}
@@ -353,7 +350,6 @@ body.menu-open .menu-foot{opacity:1}
 .final-sign{margin-top:3rem;font-family:var(--script);font-size:2.2rem;color:var(--gold-soft);transform:rotate(-2deg);display:inline-block}
 .final-arch{position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);width:min(680px,90vw);opacity:.25;pointer-events:none}
 
-/* ═══════════ 14 · REDES ═══════════ */
 .social{padding:clamp(5.5rem,11vw,9rem) 0}
 .social-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(3rem,6vw,6rem);align-items:start}
 .social-list{margin-top:2.6rem;border-top:1px solid var(--line)}
@@ -374,7 +370,6 @@ body.menu-open .menu-foot{opacity:1}
 .social-grid-media a:nth-child(3){transform:translateY(-22px)}
 @media(max-width:960px){.social-grid{grid-template-columns:1fr}.social-grid-media a:nth-child(2),.social-grid-media a:nth-child(3){transform:none}}
 
-/* ═══════════ 15 · FOOTER ═══════════ */
 footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5rem) 0 2.2rem}
 .foot-top{display:grid;grid-template-columns:1.2fr .6fr .6fr .8fr;gap:clamp(2rem,5vw,4rem);padding-bottom:3.4rem;border-bottom:1px solid var(--line-light)}
 .foot-brand .brand svg{color:var(--gold-soft);width:32px;height:32px}
@@ -389,11 +384,9 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
 @media(max-width:960px){.foot-top{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.foot-top{grid-template-columns:1fr}}
 
-/* ═══════════ 16 · WHATSAPP FLOTANTE (solo WA, animado) ═══════════ */
 .wa-float{position:fixed;right:1.4rem;bottom:1.4rem;z-index:55;display:flex;align-items:center;gap:.7rem;
   background:var(--espresso);color:var(--ivory);border-radius:999px;padding:.95rem 1.25rem;
-  box-shadow:0 10px 30px rgba(25,20,16,.28);
-  transition:background .4s;
+  box-shadow:0 10px 30px rgba(25,20,16,.28);transition:background .4s;
   animation:waFloat 5.2s ease-in-out 2.4s infinite;}
 @keyframes waFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
 .wa-float::before{content:"";position:absolute;inset:-5px;border:1px solid var(--gold-soft);border-radius:999px;opacity:.6;animation:waPulse 3.2s var(--ease-soft) infinite}
@@ -408,7 +401,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
 .wa-float:hover::after{animation:none;opacity:1}
 @media(max-width:720px){.wa-float{right:1rem;bottom:1rem;padding:.95rem}.wa-float .wa-label{display:none}}
 
-/* ═══════════ 17 · REDUCED MOTION ═══════════ */
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .marquee-track{transform:none}
@@ -465,7 +457,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
 </div>
 
 <main>
-<!-- ════════ CAP 01 · HERO ════════ -->
 <section class="hero" id="inicio" data-chapter="Impacto">
   <div class="hero-bg" aria-hidden="true">
     <div class="glow glow-a" id="glowA"></div>
@@ -493,8 +484,8 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
       <div class="arch">
         <div class="arch-outline" aria-hidden="true"></div>
         <div class="arch-frame" id="archFrame">
-          <!-- 📷 FOTO REAL #1 → guardar como /assets/foto-hero.jpg -->
-          <img src="assets/foto-hero.jpg"
+          <!-- 📷 FOTO 1: el buscador la encuentra sola en /assets -->
+          <img data-photo="hero" src="assets/foto-hero.jpg"
                onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1c421027b-889d-4ba3-b7fa-efddb92cfb1c.png';"
                alt="Diana Zaragoza sonriendo en su estudio Heal Your Life, frente al tocador con luces" fetchpriority="high">
         </div>
@@ -517,7 +508,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </div>
 </div>
 
-<!-- ════════ CAP 02 · ¿Y SI…? ════════ -->
 <section class="whatif dark" id="identificacion" data-chapter="Identificación">
   <div class="container whatif-grid">
     <div>
@@ -539,7 +529,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </div>
 </section>
 
-<!-- ════════ CAP 03 · PUENTE ════════ -->
 <section class="bridge" id="curiosidad" data-chapter="Curiosidad">
   <div class="bridge-sticky">
     <p class="kicker" style="justify-content:center"><span class="cap">Cap. 03</span> Curiosidad</p>
@@ -549,7 +538,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </div>
 </section>
 
-<!-- ════════ CAP 04 · EXPERIENCIAS ════════ -->
 <section class="exp-sec" id="experiencias" data-chapter="Descubrimiento">
   <div class="container exp-head">
     <div>
@@ -562,8 +550,8 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   <article class="exp exp--arch">
     <div class="container exp-grid">
       <div class="exp-media" data-reveal>
-        <!-- 📷 FOTO REAL #2 → guardar como /assets/foto-historia.jpg -->
-        <div class="exp-frame"><img loading="lazy" decoding="async" src="assets/foto-historia.jpg"
+        <!-- 📷 FOTO 2: el buscador la encuentra sola en /assets -->
+        <div class="exp-frame"><img data-photo="historia" loading="lazy" decoding="async" src="assets/foto-historia.jpg"
           onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1a1cc4018-dac7-434f-b479-8d48f6be1fc3.png';"
           alt="Diana en su estudio Heal Your Life, sosteniendo el libro frente al espejo con los pósters del método"></div>
         <span class="exp-num" aria-hidden="true">01</span>
@@ -647,14 +635,13 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </article>
 </section>
 
-<!-- ════════ CAP 05 · HISTORIA + CERTIFICACIONES ════════ -->
 <section class="story-sec" id="historia" data-chapter="Confianza">
   <div class="container">
     <div class="story-grid">
       <div class="story-media" data-reveal>
         <span class="story-quote-mark" aria-hidden="true">“</span>
         <div class="story-frame">
-          <img loading="lazy" decoding="async" src="assets/foto-hero.jpg"
+          <img data-photo="hero" loading="lazy" decoding="async" src="assets/foto-hero.jpg"
                onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/11c90d733-ad15-4059-9a11-e9cff115f101.png';"
                alt="Diana frente al espejo de su estudio, un espacio para volver a mirarte">
         </div>
@@ -686,7 +673,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </div>
 </section>
 
-<!-- ════════ CAP 06 · TESTIMONIOS ════════ -->
 <!-- ⚠ Reemplazar por los testimonios reales de la clienta -->
 <section class="stories" id="historias" data-chapter="Historias">
   <div class="container">
@@ -711,7 +697,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </div>
 </section>
 
-<!-- ════════ CAP 07 · ELEGIR ════════ -->
 <section class="choose" id="elegir" data-chapter="Conversión">
   <div class="container">
     <p class="kicker"><span class="cap">Cap. 07</span> Tu siguiente paso</p>
@@ -739,7 +724,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </div>
 </section>
 
-<!-- ════════ CAP 08 · CTA FINAL ════════ -->
 <section class="final dark" id="momento" data-chapter="El momento">
   <div class="glow-c" aria-hidden="true"></div>
   <div class="container">
@@ -760,7 +744,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   <svg class="final-arch" viewBox="0 0 680 340" fill="none" aria-hidden="true"><path d="M20 340V200C20 100 120 20 340 20s320 80 320 180v140" stroke="#C6A76C" stroke-width="1"/></svg>
 </section>
 
-<!-- ════════ CAP 09 · REDES ════════ -->
 <section class="social" id="conecta" data-chapter="Conecta">
   <div class="container social-grid">
     <div>
@@ -786,9 +769,9 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
       </div>
     </div>
     <div class="social-grid-media" data-reveal>
-      <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="assets/foto-historia.jpg"
+      <a data-social="instagram" href="#" aria-label="Instagram"><img data-photo="historia" loading="lazy" decoding="async" src="assets/foto-historia.jpg"
         onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1a1cc4018-dac7-434f-b479-8d48f6be1fc3.png';" alt="Preview: el estudio Heal Your Life de Diana"></a>
-      <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="assets/foto-hero.jpg"
+      <a data-social="instagram" href="#" aria-label="Instagram"><img data-photo="hero" loading="lazy" decoding="async" src="assets/foto-hero.jpg"
         onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/10ff7e89e-1cfb-4e27-8b46-5c4812294e14.png';" alt="Preview: detrás de cámaras en el tocador del estudio"></a>
       <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1b1c6d9a3-db90-41cb-a78b-de0645402c50.png" alt="Preview: mesa de trabajo del taller"></a>
       <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/16f7c05a2-99ad-454b-90ff-bcce51ad8c91.png" alt="Preview: sesión Access Bars"></a>
@@ -833,7 +816,6 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
   </div>
 </footer>
 
-<!-- Botón flotante: SOLO WhatsApp, animado -->
 <a class="wa-float" id="waFloat" data-wa="general" href="#" aria-label="Escribir por WhatsApp al +52 999 669 4307">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3Z"/><path d="M8.7 9.1c.3 2.7 3.5 5.9 6.2 6.2l1.5-1.5-2.1-1.4-1 .5c-.9-.4-1.8-1.3-2.2-2.2l.5-1-1.4-2.1z" fill="currentColor" stroke="none"/></svg>
   <span class="wa-label">Hablemos</span>
@@ -842,22 +824,60 @@ footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5r
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
-/* ═══════════════ CONFIGURACIÓN CENTRAL (EDITAR AQUÍ) ═══════════════ */
+/* ═══════════════ CONFIGURACIÓN CENTRAL (EDITAR AQUÍ) ═══════════════
+   📷 FOTOS — tres formas de conectarlas (la 1 y 2 son automáticas):
+   1) Carpeta /assets junto a index.html: el BUSCADOR prueba solo
+      nombres/extensiones comunes (ver PHOTO_SLOTS más abajo).
+   2) Renombra a:  assets/foto-hero.jpg  y  assets/foto-historia.jpg
+   3) O pega aquí el nombre exacto o una URL:                      */
 const CONFIG = {
   coachName: "Diana Zaragoza",
-  whatsapp: "529996694307", // ← +52 999 669 4307
+  whatsapp: "529996694307", // +52 999 669 4307
+  photos: {
+    hero:     "assets/foto-hero.jpg",     // ej. "assets/mi-foto.PNG" o "https://…/foto.jpg"
+    historia: "assets/foto-historia.jpg"
+  },
   waMessages: {
     general: "Hola, me gustaría conocer los próximos talleres y saber cuál podría ser adecuado para mí.",
     hablar:  "Hola, me encantaría tener una conversación contigo sobre tus talleres.",
     cual:    "Hola, me gustaría que me ayudaras a descubrir cuál taller podría ser adecuado para mí."
   },
   socials: {
-    instagram: "https://instagram.com/dianazarwellness", // ← @dianazarwellness
+    instagram: "https://instagram.com/dianazarwellness",
     facebook:  "https://facebook.com/dianazarwellness",
     tiktok:    "https://tiktok.com/@dianazarwellness",
     youtube:   "https://youtube.com/@dianazarwellness"
   }
 };
+
+/* ── BUSCADOR DE FOTOS: prueba nombres y extensiones en /assets ── */
+const PHOTO_SLOTS = {
+  hero: ["foto-hero","foto_hero","fotohero","hero","diana-hero","diana hero","diana","diana 1","foto-1","foto1","foto 1","1","01","img-1","img1","imagen-1","whatsapp image 1","image 1"],
+  historia: ["foto-historia","foto_historia","fotohistoria","historia","diana-historia","diana historia","diana estudio","estudio","foto-2","foto2","foto 2","2","02","img-2","img2","imagen-2","whatsapp image 2","image 2"]
+};
+const PHOTO_EXTS = [".jpg",".jpeg",".png",".webp",".JPG",".JPEG",".PNG",".jpg.jpg",".jpg.png",".jpeg.jpeg",".png.png",".jpg.jpeg"];
+(function(){
+  const applyPhoto = (key,url)=> document.querySelectorAll('[data-photo="'+key+'"]').forEach(im=>{ im.onerror=null; im.src=url; });
+  const tryLoad = url => new Promise(res=>{ const im=new Image(); im.onload=()=>res(true); im.onerror=()=>res(false); im.src=url; });
+  async function findPhoto(key){
+    /* 1) lo que diga CONFIG (URL externa o nombre exacto) */
+    const custom = CONFIG.photos && CONFIG.photos[key];
+    if (custom && /^https?:\/\//.test(custom)){ if (await tryLoad(custom)){ applyPhoto(key,custom); console.info("✅ Foto '"+key+"' desde URL: "+custom); return; } }
+    /* 2) nombre exacto de CONFIG dentro de assets */
+    if (custom && !/^https?:\/\//.test(custom) && (await tryLoad(custom))){ applyPhoto(key,custom); console.info("✅ Foto '"+key+"' → "+custom); return; }
+    /* 3) búsqueda automática en /assets */
+    const names = PHOTO_SLOTS[key] || [];
+    for (const n of names){
+      for (const e of PHOTO_EXTS){
+        const url = "assets/" + n + e;
+        if (await tryLoad(url)){ applyPhoto(key,url); console.info("✅ Foto '"+key+"' encontrada en: "+url); return; }
+      }
+    }
+    console.warn("⚠ Foto '"+key+"': no se encontró en /assets. Revisa: 1) que la carpeta 'assets' esté junto a index.html · 2) el nombre del archivo (sin doble extensión .jpg.jpg, activa 'Extensiones de nombre de archivo' en Windows) · 3) recarga con Ctrl+F5. Mientras tanto se muestra un respaldo.");
+  }
+  findPhoto("hero"); findPhoto("historia");
+})();
+/* ═════════════════════════════════════════════════════════════════ */
 (function(){
   const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const waLink = m => "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(m);
@@ -918,7 +938,6 @@ const CONFIG = {
     .from(".badge-rot",{opacity:0,scale:.7,rotation:-40,duration:1.1,ease:"power3.out"},1.1)
     .from(".hero-scroll",{opacity:0,duration:.8},1.4);
 
-  /* entrada elástica del botón flotante de WhatsApp */
   gsap.from("#waFloat",{y:90,opacity:0,duration:1.1,delay:1.9,ease:"back.out(1.7)"});
 
   (function(){
