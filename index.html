@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!--
+  ══════════════════════════════════════════════════════════════════
+  DIANA ZARAGOZA — EXPERIENCIA DIGITAL DE TRANSFORMACIÓN (v5)
+  ──────────────────────────────────────────────────────────────────
+  CAMBIOS DE ESTA VERSIÓN:
+  · WHATSAPP REAL: +52 999 669 4307 (todos los CTA y el flotante).
+  · INSTAGRAM REAL: @dianazarwellness (lista, preview y CONFIG).
+  · BOTÓN FLOTANTE: solo WhatsApp, con animación — entrada elástica,
+    flotación suave continua, anillo pulsante y etiqueta al hover.
+  · v4 · lockup de marca Great Vibes + mayúsculas espaciadas.
+  · v3 · fotos reales (assets/foto-hero.jpg, assets/foto-historia.jpg).
+  · v2 · scroll nativo fluido, sin Lenis ni filtros costosos.
+  ══════════════════════════════════════════════════════════════════
+  ⚠ EDITAR: CONFIG (nombre, WhatsApp, redes) al inicio del <script>.
+     Reemplazar testimonios por los reales de la clienta.
+  ══════════════════════════════════════════════════════════════════
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diana Zaragoza — Talleres de desarrollo personal · Heal Your Life® & Access Bars®</title>
+<meta name="description" content="Espacios de desarrollo personal con Diana Zaragoza para reconectar contigo, liberar patrones limitantes y abrir nuevas posibilidades. Talleres Heal Your Life®, Access Bars®, Access Facelift® y autoestima. Un espacio para ti, sin juicios y sin prisa.">
+<meta name="keywords" content="desarrollo personal, talleres de desarrollo personal, Heal Your Life, Louise Hay, Access Bars, Access Facelift, coach de desarrollo personal, autoestima, autoconocimiento, bienestar, Diana Zaragoza">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diana Zaragoza — Hay una versión de tu vida que todavía no has explorado.">
+<meta property="og:description" content="Espacios de desarrollo personal: Heal Your Life®, Access Bars®, Access Facelift® y talleres de autoconocimiento. Nuevas preguntas. Nuevas posibilidades.">
+<meta property="og:image" content="assets/foto-hero.jpg">
+<meta property="og:locale" content="es_MX">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B211A'/%3E%3Cpath d='M9 24V16a7 7 0 0 1 14 0v8' fill='none' stroke='%23C6A76C' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='19' r='1.4' fill='%23C6A76C'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/300.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/300-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/outfit@latest/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/great-vibes@latest/400.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Diana Zaragoza","jobTitle":"Facilitadora de desarrollo personal · Coach & Teacher Heal Your Life®","description":"Facilitadora certificada en desarrollo personal: Heal Your Life®, Access Bars®, Access Facelift® y talleres de autoconocimiento y autoestima.","knowsAbout":["Heal Your Life","Access Bars","Access Facelift","Desarrollo personal","Autoestima"],"sameAs":["https://instagram.com/dianazarwellness","https://facebook.com/dianazarwellness","https://tiktok.com/@dianazarwellness","https://youtube.com/@dianazarwellness"]}
+</script>
+<style>
+/* ═══════════ 1 · SISTEMA ═══════════ */
+:root{
+  --ivory:#F7F2E9; --cream:#FBF8F1; --champagne:#EFE3CF; --sand:#E5D8C1; --mineral:#D9CBB3;
+  --terracotta:#B4653F; --terra-soft:#C08560; --sage:#8D9B84;
+  --gold:#AD8A4E; --gold-soft:#C6A76C;
+  --espresso:#2B211A; --coffee:#3B2E23; --charcoal:#191410; --ink:#241C15;
+  --line:rgba(43,33,26,.15); --line-light:rgba(247,242,233,.16);
+  --display:'Fraunces',Georgia,serif; --sans:'Outfit Variable','Outfit',system-ui,sans-serif;
+  --script:'Great Vibes',cursive;
+  --ease:cubic-bezier(.77,0,.18,1); --ease-soft:cubic-bezier(.22,1,.36,1);
+  --nav-h:78px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--ivory);color:var(--ink);font:300 1.02rem/1.75 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.menu-open{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;cursor:pointer;color:inherit}
+::selection{background:var(--gold-soft);color:var(--espresso)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
+.container{width:min(1220px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:340;line-height:1.06;letter-spacing:-.01em}
+em{font-style:italic}
+
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* ═══════════ 2 · UTILIDADES TIPO ═══════════ */
+.kicker{display:flex;align-items:center;gap:.9rem;font:500 .68rem/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.kicker::before{content:"";width:44px;height:1px;background:var(--gold);flex:none}
+.kicker .cap{color:var(--terra-soft)}
+.sec-title{font-size:clamp(2.3rem,5.2vw,4.1rem);margin:.9rem 0 0}
+.sec-title em{color:var(--terracotta)}
+.dark .sec-title em{color:var(--gold-soft)}
+.lead{font-size:clamp(1.02rem,1.5vw,1.2rem);color:rgba(36,28,21,.78);max-width:56ch}
+.dark{background:var(--espresso);color:var(--ivory)}
+.dark .lead{color:rgba(247,242,233,.72)}
+
+/* Lockup de marca */
+.brand-lock{display:flex;flex-direction:column;line-height:1;text-align:left}
+.brand-lock .first{font-family:var(--script);font-weight:400;font-size:1.62rem;color:var(--terracotta);transform:translateY(2px)}
+.brand-lock .last{font:500 .6rem/1 var(--sans);letter-spacing:.46em;text-transform:uppercase;color:var(--espresso);margin-top:.28rem}
+.brand--foot .brand-lock .first{font-size:2.5rem;color:var(--gold-soft)}
+.brand--foot .brand-lock .last{color:var(--ivory)}
+
+.btn{position:relative;display:inline-flex;align-items:center;gap:.8rem;padding:1.02rem 1.9rem;border-radius:999px;
+  font:500 .72rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;overflow:hidden;
+  background:var(--espresso);color:var(--ivory);border:1px solid var(--espresso);transition:border-color .4s}
+.btn>*{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;background:var(--terracotta);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease)}
+.btn:hover::before{transform:scaleX(1)}
+.btn svg{transition:transform .45s var(--ease-soft)}
+.btn:hover svg{transform:translateX(5px)}
+.btn--ghost{background:transparent;color:var(--espresso)}
+.btn--ghost::before{background:var(--espresso)}
+.btn--ghost:hover{color:var(--ivory)}
+.dark .btn{background:var(--ivory);color:var(--espresso);border-color:var(--ivory)}
+.dark .btn::before{background:var(--gold-soft)}
+.dark .btn--ghost{background:transparent;color:var(--ivory);border-color:rgba(247,242,233,.4)}
+.dark .btn--ghost::before{background:var(--gold-soft)}
+.dark .btn--ghost:hover{color:var(--espresso);border-color:var(--gold-soft)}
+
+.link-cta{display:inline-flex;align-items:center;gap:.7rem;font:500 .72rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--espresso);position:relative;padding-bottom:.55rem}
+.link-cta::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(.35);transform-origin:left;transition:transform .5s var(--ease)}
+.link-cta:hover::after{transform:scaleX(1)}
+.link-cta svg{transition:transform .4s var(--ease-soft)}
+.link-cta:hover svg{transform:translateX(5px)}
+.dark .link-cta{color:var(--ivory)}
+
+/* ═══════════ 3 · NAV ═══════════ */
+.nav{position:fixed;inset:0 0 auto;z-index:50;height:var(--nav-h);display:flex;align-items:center;transition:background .5s,box-shadow .5s,height .5s}
+.nav.scrolled{background:rgba(247,242,233,.97);height:68px;box-shadow:0 1px 0 var(--line)}
+.nav-in{width:min(1280px,94%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand svg{width:27px;height:27px;color:var(--gold);flex:none}
+.nav-links{display:flex;gap:2.1rem;align-items:center}
+.nav-links a{font:400 .74rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;position:relative;padding:.4rem 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{display:inline-flex;align-items:center;gap:.55rem;font:500 .68rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--espresso);border-radius:999px;padding:.72rem 1.3rem;transition:background .4s,color .4s,border-color .4s}
+.nav-cta:hover{background:var(--espresso);color:var(--ivory)}
+.nav-cta svg{width:14px;height:14px}
+.burger{display:none;flex-direction:column;gap:6px;padding:.6rem}
+.burger span{width:26px;height:1.5px;background:var(--espresso);transition:transform .5s var(--ease),opacity .3s}
+@media(max-width:960px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
+body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+body.menu-open .nav{background:transparent;box-shadow:none}
+body.menu-open .burger span{background:var(--ivory)}
+
+.menu{position:fixed;inset:0;z-index:45;background:var(--espresso);color:var(--ivory);display:flex;flex-direction:column;justify-content:center;padding:6rem 8% 3rem;clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--ease);visibility:hidden}
+body.menu-open .menu{clip-path:inset(0 0 0% 0);visibility:visible}
+.menu a.m-link{font-family:var(--display);font-size:clamp(1.9rem,7vw,2.8rem);padding:.55rem 0;border-bottom:1px solid var(--line-light);display:flex;justify-content:space-between;align-items:center;opacity:0;transform:translateY(24px);transition:opacity .5s,transform .6s var(--ease-soft)}
+.menu a.m-link i{font:400 .68rem/1 var(--sans);letter-spacing:.3em;color:var(--gold-soft)}
+body.menu-open .menu a.m-link{opacity:1;transform:none}
+body.menu-open .menu a.m-link:nth-child(1){transition-delay:.15s}body.menu-open .menu a.m-link:nth-child(2){transition-delay:.22s}
+body.menu-open .menu a.m-link:nth-child(3){transition-delay:.29s}body.menu-open .menu a.m-link:nth-child(4){transition-delay:.36s}
+body.menu-open .menu a.m-link:nth-child(5){transition-delay:.43s}
+.menu-foot{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between;opacity:0;transition:opacity .5s .5s}
+body.menu-open .menu-foot{opacity:1}
+.menu-foot .menu-name{font-family:var(--script);font-size:2rem;color:var(--gold-soft)}
+.menu-foot p{font-size:.85rem;color:rgba(247,242,233,.6)}
+
+/* ═══════════ 4 · RAIL ═══════════ */
+.rail{position:fixed;left:2.1rem;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;align-items:center;gap:1.1rem}
+.rail-word{writing-mode:vertical-rl;transform:rotate(180deg);font:500 .62rem/1 var(--sans);letter-spacing:.4em;text-transform:uppercase;color:var(--terra-soft);min-height:96px;display:flex;align-items:center}
+.rail-line{width:1px;height:110px;background:var(--line);position:relative;overflow:hidden}
+.rail-line i{position:absolute;inset:0;background:var(--gold);transform:scaleY(0);transform-origin:top}
+.rail-dots{display:flex;flex-direction:column;gap:.55rem}
+.rail-dots i{width:5px;height:5px;border-radius:50%;background:var(--mineral);transition:background .4s,transform .4s}
+.rail-dots i.on{background:var(--gold);transform:scale(1.5)}
+@media(max-width:1180px){.rail{display:none}}
+
+/* ═══════════ 5 · HERO ═══════════ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:calc(var(--nav-h) + 3rem) 0 5rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.glow{position:absolute;border-radius:50%;opacity:.6}
+.glow-a{width:52vw;height:52vw;right:-14vw;top:-16vw;background:radial-gradient(circle,var(--champagne),transparent 68%)}
+.glow-b{width:38vw;height:38vw;left:-12vw;bottom:-14vw;background:radial-gradient(circle,rgba(141,155,132,.32),transparent 68%)}
+.hero-arcs{position:absolute;right:-10%;top:6%;width:64%;opacity:.5;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,6rem);align-items:center;position:relative}
+.hero-kicker{display:flex;align-items:center;gap:.9rem;font:500 .68rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--terra-soft)}
+.hero-kicker::before{content:"";width:44px;height:1px;background:var(--gold)}
+.hero-title{font-size:clamp(2.7rem,6.6vw,5.6rem);margin:1.6rem 0 1.8rem}
+.hero-title .line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero-title .line-in{display:inline-block;will-change:transform}
+.hero-title em{color:var(--terracotta)}
+.hero-sub{max-width:47ch;color:rgba(36,28,21,.78);font-size:clamp(1rem,1.4vw,1.16rem)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.3rem}
+.hero-micro{margin-top:1.7rem;font:italic 300 .95rem/1.6 var(--display);color:var(--terra-soft)}
+.hero-micro b{color:var(--gold);font-weight:400}
+.hero-media{position:relative;justify-self:center}
+.arch{position:relative;width:min(420px,78vw)}
+.arch-outline{position:absolute;inset:-16px -16px auto -16px;height:calc(100% + 8px);border:1px solid var(--gold-soft);border-bottom:none;border-radius:999px 999px 0 0;opacity:.7}
+.arch-frame{position:relative;overflow:hidden;border-radius:999px 999px 16px 16px;aspect-ratio:4/5;background:var(--sand)}
+.arch-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale(1.06)}
+.arch-cap{display:flex;align-items:baseline;gap:.6rem;margin-top:1.1rem;font:400 .68rem/1.4 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:rgba(36,28,21,.55)}
+.arch-cap::before{content:"";width:34px;height:1px;background:var(--gold);align-self:center}
+.arch-cap .cap-name{font-family:var(--script);font-size:1.35rem;letter-spacing:.02em;text-transform:none;color:var(--terracotta)}
+.badge-rot{position:absolute;left:-58px;bottom:56px;width:132px;height:132px;z-index:2}
+.badge-rot svg{width:100%;height:100%;animation:spin 28s linear infinite}
+.badge-rot text{font:500 9.5px var(--sans);letter-spacing:.32em;fill:var(--gold)}
+.badge-rot .badge-core{position:absolute;inset:0;display:grid;place-items:center}
+.badge-rot .badge-core svg{width:26px;height:26px;animation:none;color:var(--terracotta)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-scroll{position:absolute;left:4%;bottom:2.2rem;display:flex;align-items:center;gap:.8rem;font:400 .64rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:rgba(36,28,21,.5)}
+.hero-scroll i{width:1px;height:52px;background:var(--line);position:relative;overflow:hidden;display:block}
+.hero-scroll i::after{content:"";position:absolute;inset:0;background:var(--gold);animation:drip 2.4s var(--ease) infinite}
+@keyframes drip{0%{transform:translateY(-100%)}55%{transform:translateY(0)}100%{transform:translateY(100%)}}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:3.2rem}
+  .hero{padding-top:calc(var(--nav-h) + 1.5rem)}
+  .hero-media{justify-self:flex-start;margin-left:6%}
+  .badge-rot{left:auto;right:-46px;bottom:34%}
+  .hero-scroll{display:none}
+}
+
+/* ═══════════ 6 · MARQUEE ═══════════ */
+.marquee{border-block:1px solid var(--line);padding:1.15rem 0;overflow:hidden;background:var(--cream)}
+.marquee-track{display:flex;gap:3.4rem;width:max-content;animation:mq 46s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{font:italic 300 1.05rem/1 var(--display);color:var(--espresso);white-space:nowrap;display:flex;align-items:center;gap:3.4rem}
+.marquee span::after{content:"✳";font-style:normal;color:var(--gold);font-size:.8rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ═══════════ 7 · ¿Y SI…? ═══════════ */
+.whatif{padding:clamp(5.5rem,11vw,9.5rem) 0}
+.whatif-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(3rem,7vw,7rem)}
+.whatif h2{font-size:clamp(2.2rem,4.6vw,3.7rem)}
+.whatif h2 em{color:var(--gold-soft)}
+.whatif .lead{margin-top:1.6rem}
+.wi-list{list-style:none;border-top:1px solid var(--line-light)}
+.wi-item{width:100%;display:flex;gap:1.4rem;align-items:baseline;text-align:left;padding:1.35rem .4rem;border-bottom:1px solid var(--line-light);color:rgba(247,242,233,.82);font:300 1.06rem/1.6 var(--sans);transition:background .4s,padding-left .4s;position:relative}
+.wi-item:hover{background:rgba(247,242,233,.04);padding-left:1rem}
+.wi-item .wi-n{font:italic 300 .85rem/1 var(--display);color:var(--terra-soft);flex:none;width:2rem}
+.wi-item .wi-dot{margin-left:auto;flex:none;width:11px;height:11px;border:1px solid var(--gold-soft);border-radius:50%;transition:background .35s,transform .35s;transform:translateY(1px)}
+.wi-item[aria-pressed="true"]{color:var(--ivory)}
+.wi-item[aria-pressed="true"] .wi-dot{background:var(--gold-soft);transform:scale(1.25)}
+.wi-item[aria-pressed="true"] .wi-n{color:var(--gold-soft)}
+.wi-echo{margin-top:1.8rem;min-height:3.4rem;font:italic 300 1.05rem/1.6 var(--display);color:var(--gold-soft)}
+@media(max-width:960px){.whatif-grid{grid-template-columns:1fr}}
+
+/* ═══════════ 8 · PUENTE ═══════════ */
+.bridge{min-height:230vh;position:relative}
+.bridge-sticky{position:sticky;top:0;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 6%}
+.bridge-line{font-size:clamp(2rem,5.4vw,4.3rem);max-width:22ch}
+.swap{display:inline-block;position:relative;overflow:hidden;vertical-align:bottom}
+.swap-word{display:inline-block;font-style:italic;color:var(--terracotta)}
+.swap::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:var(--gold);transform:scaleX(var(--u,0));transform-origin:left}
+.bridge-sub{margin-top:2rem;max-width:44ch;color:rgba(36,28,21,.66)}
+.bridge .link-cta{margin-top:2.4rem}
+
+/* ═══════════ 9 · EXPERIENCIAS ═══════════ */
+.exp-sec{padding-top:clamp(5rem,10vw,8.5rem)}
+.exp-head{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end;padding-bottom:clamp(3rem,6vw,5rem)}
+.exp-head .lead{justify-self:end;align-self:end}
+@media(max-width:960px){.exp-head{grid-template-columns:1fr}}
+.exp{position:relative;padding:clamp(4rem,8vw,7rem) 0;border-top:1px solid var(--line)}
+.exp--tint{background:linear-gradient(180deg,var(--cream),var(--champagne) 140%)}
+.exp--sage{background:linear-gradient(180deg,#F0F1EA,#E6EAE0 140%)}
+.exp--dark{background:var(--coffee);color:var(--ivory);border-top:none}
+.exp--dark .lead{color:rgba(247,242,233,.75)}
+.exp-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(1.6rem,4vw,4.5rem);align-items:center}
+.exp-media{grid-column:1/6;position:relative}
+.exp-body{grid-column:6/13}
+.exp:nth-of-type(even) .exp-media{grid-column:8/13;order:2}
+.exp:nth-of-type(even) .exp-body{grid-column:1/8;order:1}
+.exp-frame{overflow:hidden;position:relative;background:var(--sand)}
+.exp-frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease-soft)}
+.exp:hover .exp-frame img{transform:scale(1.05)}
+.exp--arch .exp-frame{border-radius:999px 999px 14px 14px;aspect-ratio:4/5}
+.exp--arch .exp-frame img{object-position:50% 25%}
+.exp--oval .exp-frame{border-radius:50%;aspect-ratio:1/1;max-width:480px}
+.exp--tall .exp-frame{aspect-ratio:4/5;border-radius:14px}
+.exp--tall .exp-frame::after{content:"";position:absolute;inset:14px;border:1px solid rgba(198,167,108,.65);pointer-events:none}
+.exp--wide .exp-frame{aspect-ratio:16/10;border-radius:14px}
+.exp-num{position:absolute;top:-1.2rem;right:-.5rem;font:italic 300 clamp(4rem,8vw,7rem)/1 var(--display);color:transparent;-webkit-text-stroke:1px var(--gold);opacity:.55;pointer-events:none}
+.exp:nth-of-type(even) .exp-num{right:auto;left:-.5rem}
+.exp-tag{font:500 .66rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--terra-soft)}
+.exp--dark .exp-tag{color:var(--gold-soft)}
+.exp-body h3{font-size:clamp(1.8rem,3.4vw,2.7rem);margin:.8rem 0 1rem}
+.exp-body h3 sup{font-size:.45em;color:var(--gold)}
+.exp-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:0 2rem;margin:1.8rem 0 2.2rem;border-top:1px solid var(--line)}
+.exp--dark .exp-meta{border-color:var(--line-light)}
+.exp-meta div{padding:.85rem 0;border-bottom:1px solid var(--line)}
+.exp--dark .exp-meta div{border-color:var(--line-light)}
+.exp-meta dt{font:500 .6rem/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--terra-soft);margin-bottom:.35rem}
+.exp--dark .exp-meta dt{color:var(--gold-soft)}
+.exp-meta dd{font-size:.92rem}
+@media(max-width:960px){
+  .exp-grid{grid-template-columns:1fr}
+  .exp-media,.exp-body,.exp:nth-of-type(even) .exp-media,.exp:nth-of-type(even) .exp-body{grid-column:1/-1;order:initial}
+  .exp--oval .exp-frame{max-width:100%}
+}
+
+/* ═══════════ 10 · HISTORIA ═══════════ */
+.story-sec{padding:clamp(5.5rem,11vw,9.5rem) 0}
+.story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(3rem,7vw,7rem)}
+.story-media{position:relative}
+.story-frame{overflow:hidden;border-radius:14px 14px 999px 999px;aspect-ratio:4/5;position:sticky;top:calc(var(--nav-h) + 2rem)}
+.story-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.story-quote-mark{position:absolute;top:-2.4rem;left:-1.6rem;font:italic 300 7rem/1 var(--display);color:var(--gold-soft);z-index:2}
+.story-body p{margin-bottom:1.5rem;color:rgba(36,28,21,.82)}
+.story-body p:first-of-type::first-letter{font:italic 300 3.4em/0.8 var(--display);color:var(--terracotta);float:left;padding-right:.12em;padding-top:.08em}
+.pull{border-left:1px solid var(--gold);padding-left:1.6rem;margin:2.6rem 0;font:italic 300 clamp(1.4rem,2.6vw,1.9rem)/1.4 var(--display);color:var(--espresso)}
+.signature{margin-top:2.6rem;display:flex;align-items:center;gap:1.4rem}
+.signature .name{font-family:var(--script);font-weight:400;font-size:clamp(2.4rem,4vw,3.1rem);line-height:1;color:var(--terracotta);transform:rotate(-3deg)}
+.signature .sig-line{width:1px;height:52px;background:var(--line)}
+.signature .role{font:500 .64rem/1.7 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--terra-soft)}
+@media(max-width:960px){.story-grid{grid-template-columns:1fr}.story-frame{position:relative;top:0;max-width:440px}}
+
+.certs{margin-top:clamp(4rem,8vw,7rem);border-top:1px solid var(--line);padding-top:clamp(3rem,6vw,4.5rem)}
+.certs h3{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:2.4rem}
+.cert-row{display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:baseline;padding:1.5rem .4rem;border-top:1px solid var(--line);transition:background .4s,padding-left .4s}
+.cert-row:last-of-type{border-bottom:1px solid var(--line)}
+.cert-row:hover{background:var(--cream);padding-left:1.1rem}
+.cert-row .c-n{font:italic 300 .9rem/1 var(--display);color:var(--gold)}
+.cert-row .c-name{font:340 clamp(1.2rem,2.4vw,1.7rem)/1.2 var(--display)}
+.cert-row .c-name sup{font-size:.55em;color:var(--gold)}
+.cert-row .c-role{font:400 .72rem/1.6 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--terra-soft);text-align:right}
+.certs-note{margin-top:1.6rem;font-size:.86rem;color:rgba(36,28,21,.55)}
+@media(max-width:720px){.cert-row{grid-template-columns:auto 1fr}.cert-row .c-role{grid-column:2;text-align:left}}
+
+/* ═══════════ 11 · TESTIMONIOS ═══════════ */
+.stories{padding:clamp(5.5rem,11vw,9rem) 0 12vh}
+.stories-head{margin-bottom:clamp(3rem,6vw,5rem)}
+.stories-stack{display:flex;flex-direction:column;gap:8vh}
+.t-card{position:sticky;top:calc(var(--nav-h) + 2rem + var(--i)*22px);min-height:min(480px,62vh);border-radius:18px;padding:clamp(2rem,5vw,3.6rem);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;box-shadow:0 -12px 40px rgba(25,20,16,.08);will-change:transform}
+.t-card--1{background:var(--cream);border:1px solid var(--line)}
+.t-card--2{background:var(--sand)}
+.t-card--3{background:var(--espresso);color:var(--ivory)}
+.t-quote{font:italic 300 clamp(1.3rem,2.8vw,2.05rem)/1.45 var(--display)}
+.t-card--3 .t-quote{color:var(--champagne)}
+.t-mark{font:italic 300 4.4rem/0.6 var(--display);color:var(--gold);margin-bottom:1.4rem}
+.t-who{display:flex;align-items:center;gap:1rem}
+.t-mono{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:italic 400 1.05rem/1 var(--display);color:var(--gold)}
+.t-who .t-name{font:500 .8rem/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.t-who .t-tag{font:400 .72rem/1.3 var(--sans);letter-spacing:.1em;color:var(--terra-soft)}
+.t-card--3 .t-who .t-tag{color:var(--gold-soft)}
+@media(max-width:720px){.t-card{position:relative;top:0;min-height:0}}
+
+/* ═══════════ 12 · ELEGIR ═══════════ */
+.choose{padding:clamp(5.5rem,11vw,9rem) 0}
+.choose-list{margin-top:clamp(2.6rem,5vw,4rem);border-top:1px solid var(--line)}
+.choose-row{display:grid;grid-template-columns:auto 1fr auto auto;gap:clamp(1.2rem,3vw,3rem);align-items:center;width:100%;text-align:left;padding:clamp(1.6rem,3.4vw,2.6rem) .6rem;border-bottom:1px solid var(--line);transition:background .45s,padding-left .45s;position:relative;overflow:hidden}
+.choose-row::before{content:"";position:absolute;inset:0;background:var(--champagne);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease);z-index:0}
+.choose-row:hover::before{transform:scaleY(1)}
+.choose-row>*{position:relative;z-index:1}
+.choose-row .ch-n{font:italic 300 .95rem/1 var(--display);color:var(--gold)}
+.choose-row .ch-t{font:340 clamp(1.5rem,3.6vw,2.6rem)/1.15 var(--display)}
+.choose-row .ch-t em{color:var(--terracotta)}
+.choose-row .ch-d{font-size:.9rem;color:rgba(36,28,21,.6);max-width:30ch}
+.choose-row .ch-a{width:52px;height:52px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:transform .5s var(--ease-soft),background .4s,border-color .4s}
+.choose-row:hover .ch-a{transform:rotate(-45deg);background:var(--espresso);border-color:var(--espresso);color:var(--ivory)}
+@media(max-width:720px){.choose-row{grid-template-columns:auto 1fr auto}.choose-row .ch-d{display:none}}
+
+/* ═══════════ 13 · CTA FINAL ═══════════ */
+.final{position:relative;overflow:hidden;padding:clamp(6.5rem,13vw,11rem) 0;text-align:center}
+.final .glow-c{position:absolute;left:50%;top:-30%;width:70vw;height:70vw;transform:translateX(-50%);background:radial-gradient(circle,rgba(198,167,108,.16),transparent 62%)}
+.final-title{font-size:clamp(2.6rem,6.4vw,5.2rem)}
+.final-title em{color:var(--gold-soft)}
+.final-lines{margin:2.6rem auto 0;max-width:52ch;font:italic 300 clamp(1.05rem,2vw,1.35rem)/1.9 var(--display);color:rgba(247,242,233,.8)}
+.final-lines .fl{display:block;overflow:hidden}
+.final-lines .fl-in{display:inline-block}
+.final-ctas{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:3rem}
+.final-micro{margin-top:2rem;font:400 .74rem/1.6 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:rgba(247,242,233,.45)}
+.final-sign{margin-top:3rem;font-family:var(--script);font-size:2.2rem;color:var(--gold-soft);transform:rotate(-2deg);display:inline-block}
+.final-arch{position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);width:min(680px,90vw);opacity:.25;pointer-events:none}
+
+/* ═══════════ 14 · REDES ═══════════ */
+.social{padding:clamp(5.5rem,11vw,9rem) 0}
+.social-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(3rem,6vw,6rem);align-items:start}
+.social-list{margin-top:2.6rem;border-top:1px solid var(--line)}
+.social-row{display:grid;grid-template-columns:1fr auto;gap:.4rem 2rem;align-items:center;padding:1.5rem .4rem;border-bottom:1px solid var(--line);transition:background .4s,padding-left .4s}
+.social-row:hover{background:var(--cream);padding-left:1.1rem}
+.social-row .s-name{font:340 1.5rem/1.2 var(--display)}
+.social-row .s-desc{font-size:.88rem;color:rgba(36,28,21,.6)}
+.social-row .s-handle{font:500 .72rem/1 var(--sans);letter-spacing:.16em;color:var(--gold);display:flex;align-items:center;gap:.6rem}
+.social-row .s-handle svg{transition:transform .4s var(--ease-soft)}
+.social-row:hover .s-handle svg{transform:translate(4px,-4px)}
+.social-grid-media{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.social-grid-media a{overflow:hidden;border-radius:10px;aspect-ratio:1/1;position:relative}
+.social-grid-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-soft)}
+.social-grid-media a:hover img{transform:scale(1.07)}
+.social-grid-media a::after{content:"↗";position:absolute;right:.8rem;bottom:.7rem;color:var(--ivory);font-size:.9rem;opacity:0;transition:opacity .4s}
+.social-grid-media a:hover::after{opacity:1}
+.social-grid-media a:nth-child(2){transform:translateY(22px)}
+.social-grid-media a:nth-child(3){transform:translateY(-22px)}
+@media(max-width:960px){.social-grid{grid-template-columns:1fr}.social-grid-media a:nth-child(2),.social-grid-media a:nth-child(3){transform:none}}
+
+/* ═══════════ 15 · FOOTER ═══════════ */
+footer{background:var(--charcoal);color:var(--ivory);padding:clamp(4rem,8vw,6.5rem) 0 2.2rem}
+.foot-top{display:grid;grid-template-columns:1.2fr .6fr .6fr .8fr;gap:clamp(2rem,5vw,4rem);padding-bottom:3.4rem;border-bottom:1px solid var(--line-light)}
+.foot-brand .brand svg{color:var(--gold-soft);width:32px;height:32px}
+.foot-tag{margin-top:1.2rem;font:italic 300 1.25rem/1.5 var(--display);color:var(--gold-soft)}
+.foot-col h4{font:500 .66rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--terra-soft);margin-bottom:1.3rem}
+.foot-col a{display:block;padding:.32rem 0;font-size:.9rem;color:rgba(247,242,233,.72);transition:color .3s,padding-left .3s}
+.foot-col a:hover{color:var(--gold-soft);padding-left:.4rem}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;padding-top:2rem;font-size:.76rem;color:rgba(247,242,233,.42)}
+.foot-legal{display:flex;gap:1.6rem}
+.foot-legal a:hover{color:var(--gold-soft)}
+.foot-disclaimer{margin-top:1.4rem;font-size:.72rem;color:rgba(247,242,233,.35);max-width:72ch}
+@media(max-width:960px){.foot-top{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.foot-top{grid-template-columns:1fr}}
+
+/* ═══════════ 16 · WHATSAPP FLOTANTE (solo WA, animado) ═══════════ */
+.wa-float{position:fixed;right:1.4rem;bottom:1.4rem;z-index:55;display:flex;align-items:center;gap:.7rem;
+  background:var(--espresso);color:var(--ivory);border-radius:999px;padding:.95rem 1.25rem;
+  box-shadow:0 10px 30px rgba(25,20,16,.28);
+  transition:background .4s;
+  animation:waFloat 5.2s ease-in-out 2.4s infinite;}
+@keyframes waFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.wa-float::before{content:"";position:absolute;inset:-5px;border:1px solid var(--gold-soft);border-radius:999px;opacity:.6;animation:waPulse 3.2s var(--ease-soft) infinite}
+@keyframes waPulse{0%{transform:scale(.92);opacity:.7}70%{transform:scale(1.14);opacity:0}100%{opacity:0}}
+.wa-float::after{content:"";position:absolute;right:6px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--gold-soft);animation:waBlink 2.6s ease-in-out infinite}
+@keyframes waBlink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+.wa-float svg{width:19px;height:19px;color:var(--gold-soft);transition:transform .45s var(--ease-soft)}
+.wa-float .wa-label{font:500 .68rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .6s var(--ease),opacity .4s;opacity:0}
+.wa-float:hover{background:var(--coffee)}
+.wa-float:hover svg{transform:rotate(-10deg) scale(1.15)}
+.wa-float:hover .wa-label{max-width:180px;opacity:1}
+.wa-float:hover::after{animation:none;opacity:1}
+@media(max-width:720px){.wa-float{right:1rem;bottom:1rem;padding:.95rem}.wa-float .wa-label{display:none}}
+
+/* ═══════════ 17 · REDUCED MOTION ═══════════ */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .marquee-track{transform:none}
+  .t-card{position:relative;top:0}
+  .bridge{min-height:auto}
+  .bridge-sticky{position:relative;min-height:70vh}
+  .story-frame{position:relative;top:0}
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<aside class="rail" aria-hidden="true">
+  <div class="rail-word"><span id="railWord">Impacto</span></div>
+  <div class="rail-line"><i id="railProgress"></i></div>
+  <div class="rail-dots" id="railDots"></div>
+</aside>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#inicio" aria-label="Inicio — Diana Zaragoza">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 27V16a11 11 0 0 1 22 0v11" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="19.5" r="1.7" fill="currentColor"/></svg>
+      <span class="brand-lock"><span class="first" data-coach-first>Diana</span><span class="last" data-coach-last>Zaragoza</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#experiencias">Experiencias</a>
+      <a href="#historia">Mi historia</a>
+      <a href="#historias">Historias</a>
+      <a href="#conecta">Conecta</a>
+    </nav>
+    <a class="nav-cta" data-wa="general" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3Z"/></svg>
+      WhatsApp
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Menú móvil">
+    <a class="m-link" href="#inicio">Inicio <i>01</i></a>
+    <a class="m-link" href="#experiencias">Experiencias <i>04</i></a>
+    <a class="m-link" href="#historia">Mi historia <i>05</i></a>
+    <a class="m-link" href="#historias">Historias <i>06</i></a>
+    <a class="m-link" href="#conecta">Conecta <i>09</i></a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn" data-wa="general" href="#"><span>Hablar por WhatsApp</span></a>
+    <span class="menu-name" aria-hidden="true">Diana Zaragoza</span>
+    <p>Nuevas preguntas.<br>Nuevas posibilidades.</p>
+  </div>
+</div>
+
+<main>
+<!-- ════════ CAP 01 · HERO ════════ -->
+<section class="hero" id="inicio" data-chapter="Impacto">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="glow glow-a" id="glowA"></div>
+    <div class="glow glow-b" id="glowB"></div>
+    <svg class="hero-arcs" id="heroArcs" viewBox="0 0 600 600" fill="none"><circle cx="300" cy="300" r="290" stroke="#D9CBB3" stroke-width="1"/><circle cx="300" cy="300" r="215" stroke="#C6A76C" stroke-width="0.8" opacity=".55"/><circle cx="300" cy="300" r="140" stroke="#D9CBB3" stroke-width="0.7" opacity=".5"/></svg>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="hero-kicker"><span id="scrambleLabel" data-text="Facilitadora de desarrollo personal">Facilitadora de desarrollo personal</span></p>
+      <h1 class="hero-title" id="heroTitle">
+        <span class="line"><span class="line-in">Hay una versión</span></span>
+        <span class="line"><span class="line-in">de tu vida que</span></span>
+        <span class="line"><span class="line-in"><em>todavía no</em> has explorado.</span></span>
+      </h1>
+      <p class="hero-sub" data-reveal>Espacios de desarrollo personal para reconectar contigo, abrir nuevas posibilidades y comenzar a vivir desde un lugar diferente.</p>
+      <div class="hero-ctas" data-reveal>
+        <a class="btn" href="#experiencias"><span>Descubrir los talleres</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></a>
+        <a class="btn btn--ghost" data-wa="hablar" href="#"><span>Hablar por WhatsApp</span></a>
+      </div>
+      <p class="hero-micro" data-reveal>Un espacio para ti. <b>Sin juicios.</b> <b>Sin prisa.</b> Con nuevas posibilidades.</p>
+    </div>
+
+    <div class="hero-media" data-reveal>
+      <div class="arch">
+        <div class="arch-outline" aria-hidden="true"></div>
+        <div class="arch-frame" id="archFrame">
+          <!-- 📷 FOTO REAL #1 → guardar como /assets/foto-hero.jpg -->
+          <img src="assets/foto-hero.jpg"
+               onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1c421027b-889d-4ba3-b7fa-efddb92cfb1c.png';"
+               alt="Diana Zaragoza sonriendo en su estudio Heal Your Life, frente al tocador con luces" fetchpriority="high">
+        </div>
+        <div class="badge-rot" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#circ">NUEVAS PREGUNTAS · NUEVAS POSIBILIDADES ·&#160;</textPath></text></svg>
+          <span class="badge-core"><svg viewBox="0 0 32 32" fill="none"><path d="M6 26V16a10 10 0 0 1 20 0v10" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        </div>
+        <p class="arch-cap"><span class="cap-name" data-coach>Diana Zaragoza</span>&nbsp;·&nbsp;Heal Your Life® Teacher</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="hero-scroll" aria-hidden="true">Desliza para comenzar <i></i></p>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Autoconocimiento</span><span>Bienestar</span><span>Conciencia</span><span>Autoestima</span><span>Nuevas posibilidades</span><span>Expansión</span><span>Presencia</span><span>Calma</span>
+    <span>Autoconocimiento</span><span>Bienestar</span><span>Conciencia</span><span>Autoestima</span><span>Nuevas posibilidades</span><span>Expansión</span><span>Presencia</span><span>Calma</span>
+  </div>
+</div>
+
+<!-- ════════ CAP 02 · ¿Y SI…? ════════ -->
+<section class="whatif dark" id="identificacion" data-chapter="Identificación">
+  <div class="container whatif-grid">
+    <div>
+      <p class="kicker"><span class="cap">Cap. 02</span> Un momento contigo</p>
+      <h2 data-reveal>¿Y si no necesitas convertirte en <em>otra persona</em>?</h2>
+      <p class="lead" data-reveal>¿Y si se trata de comenzar a escucharte? A veces no hace falta cambiar quién eres: solo mirar con otros ojos lo que ya está en ti. Toca las frases que te resulten familiares.</p>
+    </div>
+    <div>
+      <ul class="wi-list" id="wiList">
+        <li><button class="wi-item" aria-pressed="false"><span class="wi-n">01</span>Sientes que repites patrones que ya no te representan.<span class="wi-dot"></span></button></li>
+        <li><button class="wi-item" aria-pressed="false"><span class="wi-n">02</span>Quieres reconectar contigo después de mucho tiempo cuidando de todo lo demás.<span class="wi-dot"></span></button></li>
+        <li><button class="wi-item" aria-pressed="false"><span class="wi-n">03</span>Hay aspectos de tu vida que deseas transformar, aunque aún no sepas por dónde empezar.<span class="wi-dot"></span></button></li>
+        <li><button class="wi-item" aria-pressed="false"><span class="wi-n">04</span>Te gustaría trabajar tu autoestima desde un lugar amable, no desde la exigencia.<span class="wi-dot"></span></button></li>
+        <li><button class="wi-item" aria-pressed="false"><span class="wi-n">05</span>Quieres regalarte un espacio para ti, sin culpa y sin prisa.<span class="wi-dot"></span></button></li>
+        <li><button class="wi-item" aria-pressed="false"><span class="wi-n">06</span>Buscas nuevas herramientas para vivir de una manera diferente.<span class="wi-dot"></span></button></li>
+      </ul>
+      <p class="wi-echo" id="wiEcho" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CAP 03 · PUENTE ════════ -->
+<section class="bridge" id="curiosidad" data-chapter="Curiosidad">
+  <div class="bridge-sticky">
+    <p class="kicker" style="justify-content:center"><span class="cap">Cap. 03</span> Curiosidad</p>
+    <h2 class="bridge-line" style="margin-top:1.4rem">Todo comienza cuando decides <span class="swap"><span class="swap-word" id="swapWord">mirarte</span></span></h2>
+    <p class="bridge-sub" data-reveal>No necesitas llegar con las palabras correctas. Solo con la disposición de mirar lo que ya está ahí.</p>
+    <a class="link-cta" href="#experiencias" data-reveal>Ver las experiencias <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></a>
+  </div>
+</section>
+
+<!-- ════════ CAP 04 · EXPERIENCIAS ════════ -->
+<section class="exp-sec" id="experiencias" data-chapter="Descubrimiento">
+  <div class="container exp-head">
+    <div>
+      <p class="kicker"><span class="cap">Cap. 04</span> Descubrimiento</p>
+      <h2 class="sec-title" data-reveal>Experiencias para <em>recorrer</em> tu proceso</h2>
+    </div>
+    <p class="lead" data-reveal>Cuatro caminos distintos, una misma invitación: abrir espacio para algo nuevo. Cada experiencia sostiene la anterior — y todas comparten la intención de que salgas viéndote de una manera diferente.</p>
+  </div>
+
+  <article class="exp exp--arch">
+    <div class="container exp-grid">
+      <div class="exp-media" data-reveal>
+        <!-- 📷 FOTO REAL #2 → guardar como /assets/foto-historia.jpg -->
+        <div class="exp-frame"><img loading="lazy" decoding="async" src="assets/foto-historia.jpg"
+          onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1a1cc4018-dac7-434f-b479-8d48f6be1fc3.png';"
+          alt="Diana en su estudio Heal Your Life, sosteniendo el libro frente al espejo con los pósters del método"></div>
+        <span class="exp-num" aria-hidden="true">01</span>
+      </div>
+      <div class="exp-body">
+        <p class="exp-tag" data-reveal>Método Louise Hay · La base del proceso</p>
+        <h3 data-reveal>Heal Your Life<sup>®</sup></h3>
+        <p class="lead" data-reveal>Un espacio para explorar la relación que tienes contigo, con tus pensamientos y con la vida. A través del método de Louise Hay, trabajamos creencias, diálogo interno y autoestima — con ejercicios profundos en un ambiente seguro y cercano.</p>
+        <dl class="exp-meta" data-reveal>
+          <div><dt>Duración</dt><dd>Ciclo de 6 sesiones</dd></div>
+          <div><dt>Modalidad</dt><dd>Presencial y online</dd></div>
+          <div><dt>Grupo</dt><dd>Pequeño · máx. 12 personas</dd></div>
+          <div><dt>Incluye</dt><dd>Materiales y acompañamiento</dd></div>
+        </dl>
+        <a class="link-cta" data-wa="taller" data-taller="Heal Your Life®" href="#" data-reveal>Quiero conocer este taller <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp exp--oval exp--tint">
+    <div class="container exp-grid">
+      <div class="exp-media" data-reveal>
+        <div class="exp-frame"><img loading="lazy" decoding="async" src="https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/16f7c05a2-99ad-454b-90ff-bcce51ad8c91.png" alt="Sesión de Access Bars: manos tocando con suavidad los puntos de la cabeza de una mujer en calma"></div>
+        <span class="exp-num" aria-hidden="true">02</span>
+      </div>
+      <div class="exp-body">
+        <p class="exp-tag" data-reveal>Access Consciousness® · Sesión individual</p>
+        <h3 data-reveal>Access Bars<sup>®</sup></h3>
+        <p class="lead" data-reveal>Una experiencia orientada a crear espacio, relajación y nuevas posibilidades. Mediante un toque suave en puntos de la cabeza, la sesión invita a soltar el ruido mental y a experimentar una calma que muchas personas describen como “bajar el volumen”.</p>
+        <dl class="exp-meta" data-reveal>
+          <div><dt>Duración</dt><dd>60 – 90 minutos</dd></div>
+          <div><dt>Modalidad</dt><dd>Presencial</dd></div>
+          <div><dt>Formato</dt><dd>Individual</dd></div>
+          <div><dt>Incluye</dt><dd>Conversación inicial y cierre</dd></div>
+        </dl>
+        <a class="link-cta" data-wa="taller" data-taller="Access Bars®" href="#" data-reveal>Quiero conocer esta experiencia <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp exp--tall exp--sage">
+    <div class="container exp-grid">
+      <div class="exp-media" data-reveal>
+        <div class="exp-frame"><img loading="lazy" decoding="async" src="https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/10ff7e89e-1cfb-4e27-8b46-5c4812294e14.png" alt="Naturaleza muerta de bienestar: rodillo de jade, aceite facial y toalla de lino con luz suave"></div>
+        <span class="exp-num" aria-hidden="true">03</span>
+      </div>
+      <div class="exp-body">
+        <p class="exp-tag" data-reveal>Access Consciousness® · Bienestar y cuerpo</p>
+        <h3 data-reveal>Access Facelift<sup>®</sup></h3>
+        <p class="lead" data-reveal>Una experiencia de bienestar y conexión con tu cuerpo. Un ritual suave y no invasivo que combina tacto ligero y presencia, pensado para regalarte un momento de descanso profundo y de encuentro contigo.</p>
+        <dl class="exp-meta" data-reveal>
+          <div><dt>Duración</dt><dd>90 minutos</dd></div>
+          <div><dt>Modalidad</dt><dd>Presencial</dd></div>
+          <div><dt>Formato</dt><dd>Individual</dd></div>
+          <div><dt>Ideal para</dt><dd>Regalarte un momento</dd></div>
+        </dl>
+        <a class="link-cta" data-wa="taller" data-taller="Access Facelift®" href="#" data-reveal>Quiero conocer esta experiencia <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp exp--wide exp--dark">
+    <div class="container exp-grid">
+      <div class="exp-media" data-reveal>
+        <div class="exp-frame"><img loading="lazy" decoding="async" src="https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1b1c6d9a3-db90-41cb-a78b-de0645402c50.png" alt="Mesa de taller con cuadernos abiertos, té y flores secas bajo luz de ventana"></div>
+        <span class="exp-num" aria-hidden="true">04</span>
+      </div>
+      <div class="exp-body">
+        <p class="exp-tag" data-reveal>Encuentros temáticos · Comunidad</p>
+        <h3 data-reveal>Talleres de desarrollo personal</h3>
+        <p class="lead" data-reveal>Espacios para explorar nuevas perspectivas, herramientas y posibilidades: autoestima, límites, emociones, propósito. Encuentros íntimos donde la conversación y el ejercicio compartido abren puertas que no se abren en soledad.</p>
+        <dl class="exp-meta" data-reveal>
+          <div><dt>Duración</dt><dd>Variable según el taller</dd></div>
+          <div><dt>Modalidad</dt><dd>Presencial y online</dd></div>
+          <div><dt>Grupo</dt><dd>Reducido, por inscripción</dd></div>
+          <div><dt>Ambiente</dt><dd>Íntimo y sin juicios</dd></div>
+        </dl>
+        <a class="link-cta" data-wa="taller" data-taller="los talleres de desarrollo personal" href="#" data-reveal>Quiero conocer los próximos talleres <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ════════ CAP 05 · HISTORIA + CERTIFICACIONES ════════ -->
+<section class="story-sec" id="historia" data-chapter="Confianza">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-media" data-reveal>
+        <span class="story-quote-mark" aria-hidden="true">“</span>
+        <div class="story-frame">
+          <img loading="lazy" decoding="async" src="assets/foto-hero.jpg"
+               onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/11c90d733-ad15-4059-9a11-e9cff115f101.png';"
+               alt="Diana frente al espejo de su estudio, un espacio para volver a mirarte">
+        </div>
+      </div>
+      <div class="story-body">
+        <p class="kicker"><span class="cap">Cap. 05</span> Conóceme</p>
+        <h2 class="sec-title" data-reveal>Todo comenzó con <em>una pregunta…</em></h2>
+        <div style="height:2.2rem"></div>
+        <p data-reveal>Durante años viví en automático: cumplir, llegar, sostener. Por fuera todo funcionaba; por dentro había una pregunta que volvía una y otra vez — <em>¿esto es todo?</em></p>
+        <p data-reveal>La respuesta no llegó como una revelación, sino como un proceso. Llegué al desarrollo personal buscando herramientas y encontré algo más profundo: una manera distinta de escucharme. Ahí entendí que no se trataba de convertirme en otra persona, sino de volver a mí.</p>
+        <p data-reveal>Me formé como Coach y Teacher de Heal Your Life<sup>®</sup>, y más adelante como practicante de Access Bars<sup>®</sup> y Access Facelift<sup>®</sup>. Cada herramienta llegó en su momento, y todas se volvieron parte de una misma manera de acompañar: con presencia, sin juicio y con respeto por el ritmo de cada persona.</p>
+        <blockquote class="pull" data-reveal>No se trata de arreglarte.<br>Se trata de <em>reconocerte</em>.</blockquote>
+        <p data-reveal>Hoy facilito espacios donde otras personas pueden hacerse las preguntas que yo tardé años en hacerme. Eso es lo más valioso de este trabajo: ver a alguien verse diferente, por primera vez en mucho tiempo.</p>
+        <div class="signature" data-reveal>
+          <p class="name" data-coach-first>Diana</p>
+          <span class="sig-line" aria-hidden="true"></span>
+          <p class="role">Facilitadora certificada<br><span data-coach>Diana Zaragoza</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="certs">
+      <h3 data-reveal>Formación que sostiene el camino</h3>
+      <div class="cert-row" data-reveal><span class="c-n">I</span><span class="c-name">Heal Your Life<sup>®</sup></span><span class="c-role">Coach &amp; Teacher · Método Louise Hay</span></div>
+      <div class="cert-row" data-reveal><span class="c-n">II</span><span class="c-name">Access Bars<sup>®</sup></span><span class="c-role">Practicante · Access Consciousness<sup>®</sup></span></div>
+      <div class="cert-row" data-reveal><span class="c-n">III</span><span class="c-name">Access Facelift<sup>®</sup></span><span class="c-role">Practicante · Access Consciousness<sup>®</sup></span></div>
+      <p class="certs-note" data-reveal>Formación continua, revisión constante y grupos pequeños: el marco desde donde acompaño cada proceso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CAP 06 · TESTIMONIOS ════════ -->
+<!-- ⚠ Reemplazar por los testimonios reales de la clienta -->
+<section class="stories" id="historias" data-chapter="Historias">
+  <div class="container">
+    <div class="stories-head">
+      <p class="kicker"><span class="cap">Cap. 06</span> Pequeñas historias</p>
+      <h2 class="sec-title" data-reveal>Lo que se mueve <em>por dentro</em></h2>
+    </div>
+    <div class="stories-stack">
+      <article class="t-card t-card--1" style="--i:0">
+        <div><div class="t-mark" aria-hidden="true">“</div><p class="t-quote">Llegué buscando respuestas y terminé encontrando preguntas que nunca me había permitido hacer. Ese cambio de dirección fue exactamente lo que necesitaba.</p></div>
+        <div class="t-who"><span class="t-mono">A</span><span><span class="t-name">Ana P.</span><br><span class="t-tag">Heal Your Life®</span></span></div>
+      </article>
+      <article class="t-card t-card--2" style="--i:1">
+        <div><div class="t-mark" aria-hidden="true">“</div><p class="t-quote">Salí de la sesión con una calma que no recordaba. Como si alguien, por fin, hubiera bajado el volumen del ruido.</p></div>
+        <div class="t-who"><span class="t-mono">C</span><span><span class="t-name">Claudia R.</span><br><span class="t-tag">Access Bars®</span></span></div>
+      </article>
+      <article class="t-card t-card--3" style="--i:2">
+        <div><div class="t-mark" aria-hidden="true">“</div><p class="t-quote">No fue magia. Fue aprender a mirarme de otra manera. Y cuando eso cambia, todo lo demás se mueve.</p></div>
+        <div class="t-who"><span class="t-mono">S</span><span><span class="t-name">Sofía M.</span><br><span class="t-tag">Taller de autoestima</span></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CAP 07 · ELEGIR ════════ -->
+<section class="choose" id="elegir" data-chapter="Conversión">
+  <div class="container">
+    <p class="kicker"><span class="cap">Cap. 07</span> Tu siguiente paso</p>
+    <h2 class="sec-title" data-reveal>¿Por dónde quieres <em>comenzar</em>?</h2>
+    <div class="choose-list">
+      <a class="choose-row" href="#experiencias" data-reveal>
+        <span class="ch-n">01</span>
+        <span class="ch-t">Quiero conocer <em>los talleres</em></span>
+        <span class="ch-d">Explora cada experiencia a tu ritmo.</span>
+        <span class="ch-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></span>
+      </a>
+      <a class="choose-row" data-wa="hablar" href="#" data-reveal>
+        <span class="ch-n">02</span>
+        <span class="ch-t">Quiero hablar <em>contigo</em></span>
+        <span class="ch-d">Una conversación cercana, sin compromiso.</span>
+        <span class="ch-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></span>
+      </a>
+      <a class="choose-row" data-wa="cual" href="#" data-reveal>
+        <span class="ch-n">03</span>
+        <span class="ch-t">Quiero saber cuál es <em>para mí</em></span>
+        <span class="ch-d">Cuéntame dónde estás hoy y lo descubrimos en la conversación.</span>
+        <span class="ch-a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CAP 08 · CTA FINAL ════════ -->
+<section class="final dark" id="momento" data-chapter="El momento">
+  <div class="glow-c" aria-hidden="true"></div>
+  <div class="container">
+    <p class="kicker" style="justify-content:center"><span class="cap">Cap. 08</span> Una invitación</p>
+    <h2 class="final-title" style="margin-top:1.2rem" data-reveal>Quizá este sea <em>tu momento.</em></h2>
+    <div class="final-lines">
+      <span class="fl"><span class="fl-in">Una conversación puede abrir una posibilidad.</span></span>
+      <span class="fl"><span class="fl-in">Un taller puede mostrarte otra manera de mirarte.</span></span>
+      <span class="fl"><span class="fl-in">Y a veces, todo comienza con una simple pregunta.</span></span>
+    </div>
+    <div class="final-ctas" data-reveal>
+      <a class="btn" href="#experiencias"><span>Quiero conocer más</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m0 0-5-5m5 5-5 5"/></svg></a>
+      <a class="btn btn--ghost" data-wa="general" href="#"><span>Escribir por WhatsApp</span></a>
+    </div>
+    <p class="final-micro">Sin juicios · Sin prisa · Cuando sea tu momento</p>
+    <span class="final-sign" data-coach-first aria-hidden="true">Diana</span>
+  </div>
+  <svg class="final-arch" viewBox="0 0 680 340" fill="none" aria-hidden="true"><path d="M20 340V200C20 100 120 20 340 20s320 80 320 180v140" stroke="#C6A76C" stroke-width="1"/></svg>
+</section>
+
+<!-- ════════ CAP 09 · REDES ════════ -->
+<section class="social" id="conecta" data-chapter="Conecta">
+  <div class="container social-grid">
+    <div>
+      <p class="kicker"><span class="cap">Cap. 09</span> Comunidad</p>
+      <h2 class="sec-title" data-reveal>Sigamos <em>conectados</em></h2>
+      <div class="social-list">
+        <a class="social-row" data-social="instagram" href="#" data-reveal>
+          <span><span class="s-name">Instagram</span><br><span class="s-desc">Reflexiones, fechas de talleres y detrás de cámaras.</span></span>
+          <span class="s-handle">@dianazarwellness <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17 17 7m0 0H8m9 0v9"/></svg></span>
+        </a>
+        <a class="social-row" data-social="facebook" href="#" data-reveal>
+          <span><span class="s-name">Facebook</span><br><span class="s-desc">Comunidad, convocatorias y eventos.</span></span>
+          <span class="s-handle">/dianazarwellness <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17 17 7m0 0H8m9 0v9"/></svg></span>
+        </a>
+        <a class="social-row" data-social="tiktok" href="#" data-reveal>
+          <span><span class="s-name">TikTok</span><br><span class="s-desc">Ideas breves para días largos.</span></span>
+          <span class="s-handle">@dianazarwellness <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17 17 7m0 0H8m9 0v9"/></svg></span>
+        </a>
+        <a class="social-row" data-social="youtube" href="#" data-reveal>
+          <span><span class="s-name">YouTube</span><br><span class="s-desc">Charlas, prácticas y acompañamiento.</span></span>
+          <span class="s-handle">@dianazarwellness <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17 17 7m0 0H8m9 0v9"/></svg></span>
+        </a>
+      </div>
+    </div>
+    <div class="social-grid-media" data-reveal>
+      <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="assets/foto-historia.jpg"
+        onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1a1cc4018-dac7-434f-b479-8d48f6be1fc3.png';" alt="Preview: el estudio Heal Your Life de Diana"></a>
+      <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="assets/foto-hero.jpg"
+        onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/10ff7e89e-1cfb-4e27-8b46-5c4812294e14.png';" alt="Preview: detrás de cámaras en el tocador del estudio"></a>
+      <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/1b1c6d9a3-db90-41cb-a78b-de0645402c50.png" alt="Preview: mesa de trabajo del taller"></a>
+      <a data-social="instagram" href="#" aria-label="Instagram"><img loading="lazy" decoding="async" src="https://image.qwenlm.ai/public_source/cc91a5b9-7087-4f99-983c-a6d1d6b45546/16f7c05a2-99ad-454b-90ff-bcce51ad8c91.png" alt="Preview: sesión Access Bars"></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand brand--foot" href="#inicio">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 27V16a11 11 0 0 1 22 0v11" stroke="#C6A76C" stroke-width="1.6"/><circle cx="16" cy="19.5" r="1.7" fill="#C6A76C"/></svg>
+          <span class="brand-lock"><span class="first" data-coach-first>Diana</span><span class="last" data-coach-last>Zaragoza</span></span>
+        </a>
+        <p class="foot-tag">Nuevas preguntas. Nuevas posibilidades.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explorar</h4>
+        <a href="#inicio">Inicio</a><a href="#experiencias">Experiencias</a><a href="#historia">Mi historia</a><a href="#historias">Historias</a><a href="#elegir">Comenzar</a>
+      </div>
+      <div class="foot-col">
+        <h4>Conecta</h4>
+        <a data-wa="general" href="#">WhatsApp</a>
+        <a data-social="instagram" href="#">Instagram</a>
+        <a data-social="facebook" href="#">Facebook</a>
+        <a data-social="tiktok" href="#">TikTok</a>
+        <a data-social="youtube" href="#">YouTube</a>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <a href="#">Aviso de privacidad</a>
+        <a href="#">Términos y condiciones</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span data-year>2026</span> <span data-coach>Diana Zaragoza</span> · Todos los derechos reservados.</p>
+      <p>Hecho con calma.</p>
+    </div>
+    <p class="foot-disclaimer">Los talleres y sesiones son espacios de desarrollo personal y bienestar. No sustituyen atención médica, psicológica ni psiquiátrica, y no prometen resultados específicos: cada proceso es único y pertenece a quien lo recorre.</p>
+  </div>
+</footer>
+
+<!-- Botón flotante: SOLO WhatsApp, animado -->
+<a class="wa-float" id="waFloat" data-wa="general" href="#" aria-label="Escribir por WhatsApp al +52 999 669 4307">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3Z"/><path d="M8.7 9.1c.3 2.7 3.5 5.9 6.2 6.2l1.5-1.5-2.1-1.4-1 .5c-.9-.4-1.8-1.3-2.2-2.2l.5-1-1.4-2.1z" fill="currentColor" stroke="none"/></svg>
+  <span class="wa-label">Hablemos</span>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+/* ═══════════════ CONFIGURACIÓN CENTRAL (EDITAR AQUÍ) ═══════════════ */
+const CONFIG = {
+  coachName: "Diana Zaragoza",
+  whatsapp: "529996694307", // ← +52 999 669 4307
+  waMessages: {
+    general: "Hola, me gustaría conocer los próximos talleres y saber cuál podría ser adecuado para mí.",
+    hablar:  "Hola, me encantaría tener una conversación contigo sobre tus talleres.",
+    cual:    "Hola, me gustaría que me ayudaras a descubrir cuál taller podría ser adecuado para mí."
+  },
+  socials: {
+    instagram: "https://instagram.com/dianazarwellness", // ← @dianazarwellness
+    facebook:  "https://facebook.com/dianazarwellness",
+    tiktok:    "https://tiktok.com/@dianazarwellness",
+    youtube:   "https://youtube.com/@dianazarwellness"
+  }
+};
+(function(){
+  const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const waLink = m => "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(m);
+
+  document.querySelectorAll("[data-wa]").forEach(el=>{
+    const k = el.dataset.wa;
+    let msg = CONFIG.waMessages[k] || CONFIG.waMessages.general;
+    if (k === "taller") msg = "Hola, me gustaría conocer más sobre " + (el.dataset.taller || "tus talleres") + ".";
+    el.href = waLink(msg); el.target = "_blank"; el.rel = "noopener";
+  });
+  document.querySelectorAll("[data-social]").forEach(el=>{ if (CONFIG.socials[el.dataset.social]) el.href = CONFIG.socials[el.dataset.social]; });
+  const [first, ...rest] = CONFIG.coachName.split(" ");
+  document.querySelectorAll("[data-coach-first]").forEach(e=>e.textContent = first);
+  document.querySelectorAll("[data-coach-last]").forEach(e=>e.textContent = rest.join(" "));
+  document.querySelectorAll("[data-coach]").forEach(e=>e.textContent = CONFIG.coachName);
+  document.querySelectorAll("[data-year]").forEach(e=>e.textContent = new Date().getFullYear());
+
+  const nav = document.getElementById("nav");
+  const navScroll = ()=> nav.classList.toggle("scrolled", window.scrollY > 40);
+  navScroll(); addEventListener("scroll", navScroll, {passive:true});
+
+  const burger = document.getElementById("burger");
+  const toggleMenu = open => {
+    document.body.classList.toggle("menu-open", open);
+    burger.setAttribute("aria-expanded", open);
+    document.getElementById("menu").setAttribute("aria-hidden", !open);
+  };
+  burger.addEventListener("click", ()=> toggleMenu(!document.body.classList.contains("menu-open")));
+  document.querySelectorAll('.menu a[href^="#"]').forEach(a=> a.addEventListener("click", ()=> toggleMenu(false)));
+
+  const echo = document.getElementById("wiEcho");
+  const echoMsgs = n => n === 0 ? "" :
+    n < 3 ? "Una parte de ti ya se reconoció. Eso ya es información valiosa." :
+    n < 5 ? n + " de estas frases resonaron contigo. Quizá sea un buen momento para escucharte." :
+            n + " de estas frases resonaron contigo. Este espacio fue pensado exactamente para eso.";
+  document.querySelectorAll(".wi-item").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const on = btn.getAttribute("aria-pressed") === "true";
+      btn.setAttribute("aria-pressed", String(!on));
+      echo.textContent = echoMsgs(document.querySelectorAll('.wi-item[aria-pressed="true"]').length);
+      if (!REDUCED && echo.textContent && window.gsap) gsap.fromTo(echo,{opacity:.2,y:8},{opacity:1,y:0,duration:.7,ease:"power2.out"});
+    });
+  });
+
+  if (REDUCED || !window.gsap) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.timeline({defaults:{ease:"power4.out"}})
+    .from(".hero-kicker",{opacity:0,y:14,duration:.8},.2)
+    .from(".hero-title .line-in",{yPercent:112,duration:1.25,stagger:.1},.25)
+    .from(".hero-sub",{opacity:0,y:22,duration:.9},.9)
+    .from(".hero-ctas",{opacity:0,y:22,duration:.9},1.05)
+    .from(".hero-micro",{opacity:0,duration:.9},1.25)
+    .from(".hero-media",{opacity:0,scale:.96,duration:1.2,ease:"power3.out"},.5)
+    .fromTo(".arch-frame img",{scale:1.16},{scale:1.06,duration:2.2,ease:"power2.out"},.5)
+    .from(".arch-outline",{opacity:0,y:24,duration:1.1},.8)
+    .from(".badge-rot",{opacity:0,scale:.7,rotation:-40,duration:1.1,ease:"power3.out"},1.1)
+    .from(".hero-scroll",{opacity:0,duration:.8},1.4);
+
+  /* entrada elástica del botón flotante de WhatsApp */
+  gsap.from("#waFloat",{y:90,opacity:0,duration:1.1,delay:1.9,ease:"back.out(1.7)"});
+
+  (function(){
+    const el = document.getElementById("scrambleLabel");
+    const finalTxt = el.dataset.text, chars = "AEIOULMNRSTV·—*";
+    let f = 0;
+    (function tick(){
+      f++;
+      el.textContent = finalTxt.split("").map((c,i)=> c===" " ? " " : (f/2 > i+4 ? c : chars[Math.floor(Math.random()*chars.length)])).join("");
+      if (f < finalTxt.length*2 + 10) requestAnimationFrame(tick); else el.textContent = finalTxt;
+    })();
+  })();
+
+  gsap.to("#glowA",{xPercent:7,yPercent:5,duration:12,yoyo:true,repeat:-1,ease:"sine.inOut"});
+  gsap.to("#glowB",{xPercent:-6,yPercent:-6,duration:14,yoyo:true,repeat:-1,ease:"sine.inOut"});
+
+  if (matchMedia("(pointer:fine)").matches){
+    const hero = document.querySelector(".hero");
+    let raf = null;
+    hero.addEventListener("mousemove", e=>{
+      if (raf) return;
+      raf = requestAnimationFrame(()=>{
+        const r = hero.getBoundingClientRect();
+        const dx = (e.clientX - r.left)/r.width - .5, dy = (e.clientY - r.top)/r.height - .5;
+        gsap.to("#archFrame",{x:dx*12,y:dy*9,duration:.9,ease:"power2.out"});
+        gsap.to(".arch-outline",{x:dx*-7,y:dy*-6,duration:1.1,ease:"power2.out"});
+        raf = null;
+      });
+    },{passive:true});
+  }
+
+  gsap.utils.toArray("[data-reveal]").forEach(el=>{
+    gsap.from(el,{opacity:0,y:34,duration:1,ease:"power3.out",
+      scrollTrigger:{trigger:el,start:"top 88%",once:true}});
+  });
+
+  const chapters = [...document.querySelectorAll("[data-chapter]")];
+  const dotsBox = document.getElementById("railDots");
+  chapters.forEach(()=> dotsBox.appendChild(document.createElement("i")));
+  const dots = [...dotsBox.children]; dots[0].classList.add("on");
+  const railWord = document.getElementById("railWord");
+  let curCh = "Impacto";
+  chapters.forEach(sec=>{
+    ScrollTrigger.create({trigger:sec,start:"top 55%",end:"bottom 45%",
+      onToggle:s=>{
+        if (!s.isActive) return;
+        dots.forEach((d,j)=> d.classList.toggle("on", j===chapters.indexOf(sec)));
+        if (sec.dataset.chapter !== curCh){
+          curCh = sec.dataset.chapter;
+          gsap.to(railWord,{opacity:0,y:-8,duration:.22,onComplete:()=>{
+            railWord.textContent = curCh;
+            gsap.fromTo(railWord,{opacity:0,y:8},{opacity:1,y:0,duration:.3});
+          }});
+        }
+      }});
+  });
+  gsap.to("#railProgress",{scaleY:1,ease:"none",scrollTrigger:{trigger:document.body,start:"top top",end:"bottom bottom",scrub:.4}});
+
+  const words = ["mirarte","escucharte","detenerte","elegirte","empezar"];
+  const swapEl = document.getElementById("swapWord");
+  const swapBox = document.querySelector(".swap");
+  let wi = 0;
+  const setWord = w => {
+    gsap.to(swapEl,{yPercent:-110,opacity:0,duration:.3,ease:"power2.in",onComplete:()=>{
+      swapEl.textContent = w;
+      gsap.fromTo(swapEl,{yPercent:110,opacity:0},{yPercent:0,opacity:1,duration:.45,ease:"power3.out"});
+    }});
+  };
+  ScrollTrigger.create({trigger:".bridge",start:"top 70%",end:"bottom 75%",
+    onUpdate:s=>{
+      swapBox.style.setProperty("--u", s.progress.toFixed(3));
+      const i = Math.min(words.length-1, Math.floor(s.progress * words.length));
+      if (i !== wi){ wi = i; setWord(words[i]); }
+    }});
+
+  const cards = gsap.utils.toArray(".t-card");
+  cards.forEach((card,i)=>{
+    if (!cards[i+1]) return;
+    gsap.to(card,{scale:.93,opacity:.4,transformOrigin:"top center",
+      scrollTrigger:{trigger:cards[i+1],start:"top 88%",end:"top 34%",scrub:true}});
+  });
+
+  gsap.utils.toArray(".exp-frame img, .story-frame img").forEach(img=>{
+    gsap.fromTo(img,{yPercent:-4},{yPercent:4,ease:"none",
+      scrollTrigger:{trigger:img,start:"top bottom",end:"bottom top",scrub:1}});
+  });
+
+  gsap.from(".final-lines .fl-in",{yPercent:115,duration:1.1,stagger:.14,ease:"power4.out",
+    scrollTrigger:{trigger:".final-lines",start:"top 82%",once:true}});
+  gsap.from(".final-sign",{opacity:0,rotation:4,scale:.9,duration:1.2,ease:"power3.out",
+    scrollTrigger:{trigger:".final-sign",start:"top 92%",once:true}});
+})();
+</script>
+</body>
+</html>
